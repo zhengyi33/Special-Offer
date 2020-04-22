@@ -49,12 +49,7 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     void startFenceMgr(){
-//        new Thread(new Runnable() {
-//            @Override
-//            public void run() {
-//                FenceManager.getInstance(SplashActivity.this);
-//            }
-//        }).start();
+
         Intent i = new Intent(this, MapsActivity.class);
         startActivity(i);
         progressBar.setVisibility(View.INVISIBLE);
