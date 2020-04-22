@@ -52,9 +52,7 @@ public class FenceManager {
         return fences.get(id);
     }
 
-//    static HashMap<String, FenceData> getFences() {
-//        return fences;
-//    }
+
 
     private FenceManager(Activity a){
         this.activity = a;
@@ -122,37 +120,14 @@ public class FenceManager {
     }
 
 
-//    static void drawFences() {
-//        for (String id : fences.keySet()){
-//            drawFence(fences.get(id));
-//        }
-//    }
-//
-//    private static void drawFence(FenceData fd) {
-//        int line = Color.parseColor(fd.getFenceColor());
-//        int fill = ColorUtils.setAlphaComponent(line, 85);
-//
-//        LatLng latLng = new LatLng(fd.getLat(), fd.getLon());
-//
-//        Circle c = mapsActivity.getMap().addCircle(new CircleOptions()
-//                .center(latLng)
-//                .radius(fd.getRadius())
-//                .strokePattern(pattern)
-//                .strokeColor(line)
-//                .fillColor(fill));
-//
-//        circles.add(c);
-//    }
+
 
     Geocoder getGeocoder() {
         return geocoder;
     }
 
     void addFences() {
-//        fences.clear();
-//        for (FenceData fd : fs){
-//            fences.put(fd.getId(), fd);
-//        }
+
 
         for (FenceData fd : fences.values()){
             //FenceData fd = fences.get(id);
@@ -199,23 +174,7 @@ public class FenceManager {
         }
     }
 
-//    private void drawFences() {
-//        for (String id : fences.keySet()){
-//            FenceData fd = fences.get(id);
-//            int line = Color.parseColor(fd.getFenceColor());
-//            int fill = ColorUtils.setAlphaComponent(line, 85);
-//
-//            LatLng latLng = new LatLng(fd.getLat(), fd.getLon());
-//            Circle c = mMap.addCircle(new CircleOptions()
-//                    .center(latLng)
-//                    .radius(fd.getRadius())
-//                    .strokePattern(pattern)
-//                    .strokeColor(line)
-//                    .fillColor(fill));
-//
-//            circles.add(c);
-//        }
-//    }
+
 
     private  PendingIntent getGeofencePendingIntent() {
 
