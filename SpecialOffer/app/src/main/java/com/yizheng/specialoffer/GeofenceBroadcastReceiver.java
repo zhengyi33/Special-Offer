@@ -31,8 +31,7 @@ public class GeofenceBroadcastReceiver extends BroadcastReceiver {
             Log.e(TAG, "Error: " + geofencingEvent.getErrorCode());
             return;
         }
-        // Get the geofences that were triggered. A single event can trigger
-        // multiple geofences.
+        
         List<Geofence> triggeringGeofences = geofencingEvent.getTriggeringGeofences();
 
         for (Geofence g : triggeringGeofences) {
@@ -60,8 +59,7 @@ public class GeofenceBroadcastReceiver extends BroadcastReceiver {
         }
 
 
-        // You could build a pending intent here to open an activity when the
-        // notification is tapped. Not doing that here though.
+        
 
         Intent intent = new Intent(context, ActivityFromNotification.class);
         intent.putExtra("fence_data", fd);
