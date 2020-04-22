@@ -38,33 +38,7 @@ public class FenceDataDownloader extends AsyncTask<String, Void, String> {
 
         fenceManager.receiveResult(result);
 
-//        ArrayList<FenceData> fences = new ArrayList<>();
-//        try {
-//            JSONObject jObj = new JSONObject(result);
-//            JSONArray jArr = jObj.getJSONArray("fences");
-//            for (int i = 0; i < jArr.length(); i++) {
-//                JSONObject fObj = jArr.getJSONObject(i);
-//                String id = fObj.getString("id");
-//                String address = fObj.getString("address");
-//                String website = fObj.getString("website");
-//                float rad = (float) fObj.getDouble("radius");
-//                int type = fObj.getInt("type");
-//                String message = fObj.getString("message");
-//                String code = fObj.getString("code");
-//                String color = fObj.getString("fenceColor");
-//                String logo = fObj.getString("logo");
-//
-//                LatLng ll = getLatLong(address);
-//
-//                if (ll != null) {
-//                    FenceData fd = new FenceData(id, address, website, rad, type, ll.latitude, ll.longitude, message, code, color, logo);
-//                    fences.add(fd);
-//                }
-//            }
-//            FenceManager.addFences(fences);
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
+
     }
 
     private LatLng getLatLong(String address) {
